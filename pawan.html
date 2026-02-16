@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawan Jangir | Portfolio</title>
+    
+    <style>
+        :root {
+            --primary: #2563eb;
+            --dark: #1e293b;
+            --light: #f8fafc;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; background: var(--light); color: var(--dark); }
+        
+        /* Header & Hero Section */
+        header { 
+            background: linear-gradient(135deg, #1e3a8a, #2563eb); 
+            color: white; 
+            padding: 60px 20px; 
+            text-align: center; 
+        }
+
+        /* Photo Styling */
+        .profile-container {
+            margin-bottom: 20px;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%; /* Makes photo circular */
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 20px; }
+
+        /* Badges */
+        .badge-container { margin-top: 10px; }
+        .badge { 
+            background: rgba(255,255,255,0.2); 
+            padding: 6px 15px; 
+            border-radius: 20px; 
+            font-size: 0.85rem; 
+            margin: 5px; 
+            display: inline-block; 
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        /* Layout Container */
+        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+        .section-title { border-left: 5px solid var(--primary); padding-left: 15px; margin-bottom: 30px; color: #1e3a8a; font-size: 1.8rem; }
+
+        /* Grid System */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card { 
+            background: white; 
+            padding: 25px; 
+            border-radius: 12px; 
+            border: 1px solid #e2e8f0; 
+            transition: 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px rgba(0,0,0,0.1); }
+        .card h3, .card h4 { color: var(--primary); margin-bottom: 10px; }
+        
+        ul { margin-left: 20px; margin-top: 10px; }
+        li { margin-bottom: 5px; }
+
+        /* Button Styling */
+        .btn { 
+            background: var(--primary); 
+            color: white; 
+            padding: 12px 25px; 
+            border: none; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            text-decoration: none; 
+            display: inline-block; 
+            margin-top: 20px; 
+            font-weight: bold;
+        }
+        .btn:hover { background: #1d4ed8; }
+
+        /* Footer */
+        footer { 
+            text-align: center; 
+            padding: 50px 20px; 
+            background: #e2e8f0; 
+            margin-top: 40px; 
+        }
+        .contact-info { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="hero">
+        <div class="profile-container">
+            <img src="founder/pawanjangir.jpg.jpeg" alt="Pawan Jangir" class="profile-pic">
+        </div>
+        
+        <h1>Pawan Jangir</h1>
+        <p>Java Backend Developer & Operations Specialist</p>
+        
+        <div class="badge-container">
+            <span class="badge">Java (3+ Yrs)</span>
+            <span class="badge">Spring Boot</span>
+            <span class="badge">MySQL & Oracle</span>
+            <span class="badge">HTML/CSS (4+ Yrs)</span>
+            <span class="badge">Chat Support</span>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    <h2 class="section-title">Core Expertise</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Technical Stack</h3>
+            <p><strong>Backend:</strong> Java (Core & Advanced), Spring Boot, SQL, JDBC, JSP.</p>
+            <p><strong>Frontend:</strong> HTML5, CSS3, JavaScript, Bootstrap.</p>
+        </div>
+        <div class="card">
+            <h3>Support & Operations</h3>
+            <p><strong>Experience:</strong> 4 Years of Customer & Chat Support.</p>
+            <p><strong>Management:</strong> Expertise in branch operations and team handling.</p>
+        </div>
+    </div>
+
+    <h2 class="section-title" style="margin-top: 50px;">Work Experience</h2>
+    
+    <div class="card" style="margin-bottom: 20px;">
+        <h4>Senior Developer | Jangir IT Solution</h4>
+        <p><strong>2024 – Present</strong></p>
+        <ul>
+            <li>Developed Java-based Hospital Management System with automated lead generation.</li>
+            <li>Implemented JSP, JDBC, and Oracle Database connectivity for real-time data tracking.</li>
+            <li>Optimized backend modules for better performance and scalability.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h4>General Manager | Niranjan Gas Agency</h4>
+        <p><strong>2020 – 2024</strong></p>
+        <ul>
+            <li>Led the customer and chat support department for 4 consecutive years.</li>
+            <li>Optimized cylinder distribution logistics and managed branch operations.</li>
+            <li>Improved customer resolution speed by implementing better tracking systems.</li>
+        </ul>
+    </div>
+
+    <h2 class="section-title" style="margin-top: 50px;">Education</h2>
+    <div class="card">
+        <p><strong>M.Sc (Computer Science)</strong> - SS Jain Subodh PG Autonomous College, Jaipur (2021-2023)</p>
+        <p><strong>B.Sc</strong> - Amrit Nath College (2018-2021)</p>
+    </div>
+</div>
+
+<footer>
+    <div class="contact-info">
+        <h3>Let's Collaborate</h3>
+        <p style="margin-top: 10px;">Email: <strong>jangiritsolution01@gmail.com</strong></p>
+        <p>Location: <strong>Fatehpur (Shekhawati), Sikar, Rajasthan - 332301</strong></p>
+    </div>
+    <a href="https://www.linkedin.com/in/pawan-jangir-133a453a7/" target="_blank" class="btn">Connect on LinkedIn</a>
+    
+    <script>
+        console.log("Pawan Jangir Portfolio Loaded Successfully!");
+    </script>
+</footer>
+
+</body>
+</html>
