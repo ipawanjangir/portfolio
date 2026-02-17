@@ -3,175 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pawan Jangir | Portfolio</title>
+    <title>Pawan Jangir | Tech Automation & Support Expert</title>
     
     <style>
         :root {
             --primary: #2563eb;
-            --dark: #1e293b;
+            --secondary: #1e40af;
+            --accent: #22c55e;
+            --linkedin: #0077b5;
+            --dark: #0f172a;
             --light: #f8fafc;
         }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; background: var(--light); color: var(--dark); }
-        
+        body { font-family: 'Inter', 'Segoe UI', sans-serif; background: var(--light); color: var(--dark); line-height: 1.6; }
+
         /* Header & Hero Section */
         header { 
-            background: linear-gradient(135deg, #1e3a8a, #2563eb); 
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); 
             color: white; 
-            padding: 60px 20px; 
-            text-align: center; 
+            padding: 80px 20px 120px; 
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
         }
 
-        /* Photo Styling */
-        .profile-container {
-            margin-bottom: 20px;
-        }
         .profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%; /* Makes photo circular */
-            border: 4px solid rgba(255, 255, 255, 0.3);
+            width: 150px; height: 150px;
+            border-radius: 50%;
+            border: 5px solid rgba(255,255,255,0.1);
             object-fit: cover;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
-        .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
-        .hero p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 20px; }
+        .hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 10px; }
+        .hero p { font-size: 1.3rem; color: #cbd5e1; max-width: 700px; margin: 0 auto 25px; }
 
-        /* Badges */
-        .badge-container { margin-top: 10px; }
+        /* Social & Badges */
+        .hero-actions { display: flex; flex-direction: column; align-items: center; gap: 20px; }
+        .badge-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
         .badge { 
-            background: rgba(255,255,255,0.2); 
-            padding: 6px 15px; 
-            border-radius: 20px; 
-            font-size: 0.85rem; 
-            margin: 5px; 
-            display: inline-block; 
-            border: 1px solid rgba(255,255,255,0.3);
+            background: rgba(255,255,255,0.1); padding: 8px 18px; 
+            border-radius: 50px; font-size: 0.85rem; border: 1px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(5px);
         }
 
-        /* Layout Container */
-        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
-        .section-title { border-left: 5px solid var(--primary); padding-left: 15px; margin-bottom: 30px; color: #1e3a8a; font-size: 1.8rem; }
-
-        /* Grid System */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .card { 
-            background: white; 
-            padding: 25px; 
-            border-radius: 12px; 
-            border: 1px solid #e2e8f0; 
-            transition: 0.3s;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px rgba(0,0,0,0.1); }
-        .card h3, .card h4 { color: var(--primary); margin-bottom: 10px; }
+        /* Sections */
+        .container { max-width: 1100px; margin: -50px auto 0; padding: 0 20px 60px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
         
-        ul { margin-left: 20px; margin-top: 10px; }
-        li { margin-bottom: 5px; }
+        .card { 
+            background: white; padding: 30px; border-radius: 20px; 
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid #f1f5f9;
+            transition: all 0.3s ease;
+        }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+        .card h3 { color: var(--primary); margin-bottom: 15px; border-bottom: 2px solid #f1f5f9; padding-bottom: 10px; }
+        
+        /* Automation Highlight */
+        .automation-highlight {
+            background: linear-gradient(90deg, #eff6ff 0%, #dbeafe 100%);
+            border-left: 8px solid var(--primary);
+            padding: 35px; border-radius: 0 20px 20px 0; margin: 40px 0;
+        }
 
-        /* Button Styling */
+        /* Buttons */
         .btn { 
-            background: var(--primary); 
-            color: white; 
-            padding: 12px 25px; 
-            border: none; 
-            border-radius: 8px; 
-            cursor: pointer; 
-            text-decoration: none; 
-            display: inline-block; 
-            margin-top: 20px; 
-            font-weight: bold;
+            background: var(--primary); color: white; padding: 12px 25px; 
+            border-radius: 10px; text-decoration: none; display: inline-flex; 
+            align-items: center; gap: 8px; font-weight: 600; transition: 0.3s; border: none;
         }
-        .btn:hover { background: #1d4ed8; }
+        .btn:hover { transform: scale(1.03); filter: brightness(1.1); }
+        .btn-linkedin { background: var(--linkedin); }
 
-        /* Footer */
-        footer { 
-            text-align: center; 
-            padding: 50px 20px; 
-            background: #e2e8f0; 
-            margin-top: 40px; 
+        /* Chat Widget */
+        #chat-widget { position: fixed; bottom: 30px; right: 30px; z-index: 1000; }
+        .chat-btn {
+            background: var(--accent); color: white; border: none; width: 60px; height: 60px;
+            border-radius: 50%; cursor: pointer; font-size: 24px; box-shadow: 0 10px 25px rgba(34, 197, 94, 0.4);
+            display: flex; align-items: center; justify-content: center;
         }
-        .contact-info { margin-bottom: 20px; }
+        .chat-popup {
+            display: none; width: 300px; background: white; border-radius: 20px;
+            position: absolute; bottom: 80px; right: 0; padding: 20px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.2); border: 1px solid #f1f5f9;
+        }
+        .chat-popup.active { display: block; animation: slideIn 0.3s ease-out; }
+        @keyframes slideIn { from { transform: translateY(20px); opacity: 0; } }
+
+        .chat-option {
+            display: block; width: 100%; text-align: left; padding: 10px;
+            margin-bottom: 8px; border: 1px solid #e2e8f0; border-radius: 8px;
+            background: #f8fafc; cursor: pointer; font-size: 0.9rem;
+        }
+        .chat-option:hover { background: var(--primary); color: white; }
+
+        footer { text-align: center; padding: 60px 20px; background: #f1f5f9; margin-top: 40px; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            header { padding: 60px 20px 100px; }
+        }
     </style>
 </head>
 <body>
 
 <header>
     <div class="hero">
-        <div class="profile-container">
-            <img src="founder/pawanjangir.jpg.jpeg" alt="Pawan Jangir" class="profile-pic">
-        </div>
-        
+        <img src="founder/pawanjangir.jpg.jpeg" alt="Pawan Jangir" class="profile-pic">
         <h1>Pawan Jangir</h1>
-        <p>Java Backend Developer & Operations Specialist</p>
+        <p>Java Backend Developer & Technical Support Specialist</p>
         
-        <div class="badge-container">
-            <span class="badge">Java (3+ Yrs)</span>
-            <span class="badge">Spring Boot</span>
-            <span class="badge">MySQL & Oracle</span>
-            <span class="badge">HTML/CSS (4+ Yrs)</span>
-            <span class="badge">Chat Support</span>
+        <div class="hero-actions">
+            <!-- <a href="https://www.linkedin.com/in/pawan-jangir-133a453a7/" target="_blank" class="btn btn-linkedin">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.432.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
+                Connect on LinkedIn
+            </a> -->
+            
+            <div class="badge-container">
+                <span class="badge">🚀 Founder @ Jangir IT Solution</span>
+                <span class="badge">💻 Java / Spring Boot</span>
+                <span class="badge">🎧 SaaS Support Expert</span>
+                <span class="badge" style="background: var(--accent); border: none;">⚡ Immediate Joiner</span>
+            </div>
         </div>
     </div>
 </header>
 
 <div class="container">
-    <h2 class="section-title">Core Expertise</h2>
     <div class="grid">
         <div class="card">
-            <h3>Technical Stack</h3>
-            <p><strong>Backend:</strong> Java (Core & Advanced), Spring Boot, SQL, JDBC, JSP.</p>
-            <p><strong>Frontend:</strong> HTML5, CSS3, JavaScript, Bootstrap.</p>
+            <h3>Technical Expertise</h3>
+            <p><strong>Languages:</strong> Java (8+), JavaScript, HTML/CSS</p>
+            <p><strong>Frameworks:</strong> Spring Boot, Hibernate</p>
+            <p><strong>Tools:</strong> VS Code, Git, Postman, MySQL</p>
         </div>
         <div class="card">
-            <h3>Support & Operations</h3>
-            <p><strong>Experience:</strong> 4 Years of Customer & Chat Support.</p>
-            <p><strong>Management:</strong> Expertise in branch operations and team handling.</p>
+            <h3>Support & Ops</h3>
+            <p><strong>Roles:</strong> Customer Support Executive, Operations Manager</p>
+            <p><strong>Skills:</strong> Technical Troubleshooting, CRM, SLAs</p>
+            <p><strong>Focus:</strong> Fast ART (Average Response Time) & High CSAT</p>
         </div>
     </div>
 
-    <h2 class="section-title" style="margin-top: 50px;">Work Experience</h2>
-    
-    <div class="card" style="margin-bottom: 20px;">
-        <h4>Senior Developer | Jangir IT Solution</h4>
-        <p><strong>2024 – Present</strong></p>
-        <ul>
-            <li>Developed Java-based Hospital Management System with automated lead generation.</li>
-            <li>Implemented JSP, JDBC, and Oracle Database connectivity for real-time data tracking.</li>
-            <li>Optimized backend modules for better performance and scalability.</li>
-        </ul>
+    <div class="automation-highlight">
+        <h2 style="color: var(--primary); margin-bottom: 10px;">🔥 Featured Project: Scraping Engine</h2>
+        <p>Built a high-performance **Java Scraping Engine** for real-time market data. Optimized for the Fintech industry to automate lead generation and data workflows.</p>
     </div>
 
+    <h2 style="margin: 40px 0 20px; border-left: 5px solid var(--primary); padding-left: 15px;">Experience</h2>
+    <div class="card" style="margin-bottom: 20px;">
+        <h4>Senior Tech Lead | Jangir IT Solution</h4>
+        <p style="color: var(--primary); font-weight: bold;">2024 - Present</p>
+        <p>Developing automation scripts and debugging SaaS products using VS Code.</p>
+    </div>
     <div class="card">
         <h4>General Manager | Niranjan Gas Agency</h4>
-        <p><strong>2020 – 2024</strong></p>
-        <ul>
-            <li>Led the customer and chat support department for 4 consecutive years.</li>
-            <li>Optimized cylinder distribution logistics and managed branch operations.</li>
-            <li>Improved customer resolution speed by implementing better tracking systems.</li>
-        </ul>
-    </div>
-
-    <h2 class="section-title" style="margin-top: 50px;">Education</h2>
-    <div class="card">
-        <p><strong>M.Sc (Computer Science)</strong> - SS Jain Subodh PG Autonomous College, Jaipur (2021-2023)</p>
-        <p><strong>B.Sc</strong> - Amrit Nath College (2018-2021)</p>
+        <p style="color: #64748b; font-weight: bold;">2020 - 2024</p>
+        <p>Managed 4 years of customer operations with a focus on resolving technical billing issues.</p>
     </div>
 </div>
 
-<footer>
-    <div class="contact-info">
-        <h3>Let's Collaborate</h3>
-        <p style="margin-top: 10px;">Email: <strong>jangiritsolution01@gmail.com</strong></p>
-        <p>Location: <strong>Fatehpur (Shekhawati), Sikar, Rajasthan - 332301</strong></p>
+<div id="chat-widget">
+    <div id="chat-popup" class="chat-popup">
+        <h4 style="color: var(--accent); margin-bottom: 5px;">Pawan's Assistant 🤖</h4>
+        <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 15px;">Hi! Aapko kis service ke baare mein jaanna hai?</p>
+        <button class="chat-option" onclick="sendToWA('Hiring for Tech Role')">Hire for Java/Tech Role</button>
+        <button class="chat-option" onclick="sendToWA('Support Opportunity')">Hire for Support Role</button>
+        <button class="chat-option" onclick="sendToWA('Automation Project')">Business Automation Query</button>
     </div>
-    <a href="https://www.linkedin.com/in/pawan-jangir-133a453a7/" target="_blank" class="btn">Connect on LinkedIn</a>
-    
-    <script>
-        console.log("Pawan Jangir Portfolio Loaded Successfully!");
-    </script>
+    <button class="chat-btn" onclick="toggleChat()">💬</button>
+</div>
+
+<footer>
+    <h2>Let's connect and collaborate!</h2>
+    <p style="margin: 15px 0;">Email: <strong>jangiritsolution01@gmail.com</strong></p>
+    <div style="display: flex; justify-content: center; gap: 15px;">
+        <a href="https://www.linkedin.com/in/pawan-jangir-133a453a7/" target="_blank" class="btn btn-linkedin">LinkedIn</a>
+        <a href="mailto:jangiritsolution01@gmail.com?subject=Job%20Opportunity&body=Hi%20Pawan," class="btn" style="background: var(--dark);">Email Me</a>    </div>
 </footer>
+
+<script>
+    function toggleChat() {
+        document.getElementById('chat-popup').classList.toggle('active');
+    }
+    function sendToWA(topic) {
+        let myNumber = "918905079206"; 
+        let message = encodeURIComponent("Hi Pawan, Maine aapka portfolio dekha. Mujhe " + topic + " ke baare mein baat karni hai.");
+        window.open("https://wa.me/" + myNumber + "?text=" + message, '_blank');
+    }
+</script>
 
 </body>
 </html>
