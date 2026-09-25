@@ -1,198 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pawan Jangir | Tech Automation & Support Expert</title>
-    
-    <style>
-        :root {
-            --primary: #2563eb;
-            --secondary: #1e40af;
-            --accent: #22c55e;
-            --linkedin: #0077b5;
-            --dark: #0f172a;
-            --light: #f8fafc;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', 'Segoe UI', sans-serif; background: var(--light); color: var(--dark); line-height: 1.6; }
-
-        /* Header & Hero Section */
-        header { 
-            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); 
-            color: white; 
-            padding: 80px 20px 120px; 
-            text-align: center;
-            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-        }
-
-        .profile-pic {
-            width: 150px; height: 150px;
-            border-radius: 50%;
-            border: 5px solid rgba(255,255,255,0.1);
-            object-fit: cover;
-            margin-bottom: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-
-        .hero h1 { font-size: 3rem; font-weight: 800; margin-bottom: 10px; }
-        .hero p { font-size: 1.3rem; color: #cbd5e1; max-width: 700px; margin: 0 auto 25px; }
-
-        /* Social & Badges */
-        .hero-actions { display: flex; flex-direction: column; align-items: center; gap: 20px; }
-        .badge-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
-        .badge { 
-            background: rgba(255,255,255,0.1); padding: 8px 18px; 
-            border-radius: 50px; font-size: 0.85rem; border: 1px solid rgba(255,255,255,0.2);
-            backdrop-filter: blur(5px);
-        }
-
-        /* Sections */
-        .container { max-width: 1100px; margin: -50px auto 0; padding: 0 20px 60px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
-        
-        .card { 
-            background: white; padding: 30px; border-radius: 20px; 
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05); border: 1px solid #f1f5f9;
-            transition: all 0.3s ease;
-        }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
-        .card h3 { color: var(--primary); margin-bottom: 15px; border-bottom: 2px solid #f1f5f9; padding-bottom: 10px; }
-        
-        /* Automation Highlight */
-        .automation-highlight {
-            background: linear-gradient(90deg, #eff6ff 0%, #dbeafe 100%);
-            border-left: 8px solid var(--primary);
-            padding: 35px; border-radius: 0 20px 20px 0; margin: 40px 0;
-        }
-
-        /* Buttons */
-        .btn { 
-            background: var(--primary); color: white; padding: 12px 25px; 
-            border-radius: 10px; text-decoration: none; display: inline-flex; 
-            align-items: center; gap: 8px; font-weight: 600; transition: 0.3s; border: none;
-        }
-        .btn:hover { transform: scale(1.03); filter: brightness(1.1); }
-        .btn-linkedin { background: var(--linkedin); }
-
-        /* Chat Widget */
-        #chat-widget { position: fixed; bottom: 30px; right: 30px; z-index: 1000; }
-        .chat-btn {
-            background: var(--accent); color: white; border: none; width: 60px; height: 60px;
-            border-radius: 50%; cursor: pointer; font-size: 24px; box-shadow: 0 10px 25px rgba(34, 197, 94, 0.4);
-            display: flex; align-items: center; justify-content: center;
-        }
-        .chat-popup {
-            display: none; width: 300px; background: white; border-radius: 20px;
-            position: absolute; bottom: 80px; right: 0; padding: 20px;
-            box-shadow: 0 15px 50px rgba(0,0,0,0.2); border: 1px solid #f1f5f9;
-        }
-        .chat-popup.active { display: block; animation: slideIn 0.3s ease-out; }
-        @keyframes slideIn { from { transform: translateY(20px); opacity: 0; } }
-
-        .chat-option {
-            display: block; width: 100%; text-align: left; padding: 10px;
-            margin-bottom: 8px; border: 1px solid #e2e8f0; border-radius: 8px;
-            background: #f8fafc; cursor: pointer; font-size: 0.9rem;
-        }
-        .chat-option:hover { background: var(--primary); color: white; }
-
-        footer { text-align: center; padding: 60px 20px; background: #f1f5f9; margin-top: 40px; }
-
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
-            header { padding: 60px 20px 100px; }
-        }
-    </style>
+    <title>Pawan Jangir — Web Developer | Business Websites</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
 
-<header>
-    <div class="hero">
-        <img src="founder/pawanjangir.jpg.jpeg" alt="Pawan Jangir" class="profile-pic">
-        <h1>Pawan Jangir</h1>
-        <p>Java Backend Developer & Technical Support Specialist</p>
-        
-        <div class="hero-actions">
-            <!-- <a href="https://www.linkedin.com/in/pawan-jangir-133a453a7/" target="_blank" class="btn btn-linkedin">
-                <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.432.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>
-                Connect on LinkedIn
-            </a> -->
-            
-            <div class="badge-container">
-                <span class="badge">🚀 Founder @ Jangir IT Solution</span>
-                <span class="badge">💻 Java / Spring Boot</span>
-                <span class="badge">🎧 SaaS Support Expert</span>
-                <span class="badge" style="background: var(--accent); border: none;">⚡ Immediate Joiner</span>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Pawan Jangir</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-sub">Digital Growth Specialist · Jangir IT Solution</p>
+            <h1>I help businesses grow<br>online.</h1>
+            <p class="hero-tag">Web Development · Digital Marketing · Business Consulting · MSME Registered</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn-gold">View My Work</a>
+                <a href="#contact" class="btn-outline">Hire Me</a>
             </div>
         </div>
-    </div>
-</header>
+    </section>
 
-<div class="container">
-    <div class="grid">
-        <div class="card">
-            <h3>Technical Expertise</h3>
-            <p><strong>Languages:</strong> Java (8+), JavaScript, HTML/CSS</p>
-            <p><strong>Frameworks:</strong> Spring Boot, Hibernate</p>
-            <p><strong>Tools:</strong> VS Code, Git, Postman, MySQL</p>
+    <!-- Philosophy -->
+    <section class="philosophy-section">
+        <h2 class="section-title">My Philosophy</h2>
+        <div class="philosophy-grid">
+            <div class="philosophy-card">
+                <h3>Strategy over Guesswork</h3>
+                <p>I don't just build websites — I build digital strategies that generate leads, bookings, and revenue.
+                </p>
+            </div>
+            <div class="philosophy-card">
+                <h3>Growth over Traffic</h3>
+                <p>Traffic doesn't pay bills. Conversions do. I focus on measurable business growth, not vanity metrics.
+                </p>
+            </div>
+            <div class="philosophy-card">
+                <h3>Results over Reports</h3>
+                <p>I don't send you monthly reports and disappear. I work with you until you see real results.</p>
+            </div>
         </div>
-        <div class="card">
-            <h3>Support & Ops</h3>
-            <p><strong>Roles:</strong> Customer Support Executive, Operations Manager</p>
-            <p><strong>Skills:</strong> Technical Troubleshooting, CRM, SLAs</p>
-            <p><strong>Focus:</strong> Fast ART (Average Response Time) & High CSAT</p>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills-section" id="skills">
+        <h2 class="section-title">What I Build</h2>
+        <div class="skills-grid">
+            <div class="service-card">
+                <h3>Website Design & Development</h3>
+                <p>Custom design, responsive, fast loading, SEO-ready.</p>
+                <p class="price-tag">Starting ₹8,000</p>
+            </div>
+            <div class="service-card">
+                <h3>Digital Marketing</h3>
+                <p>SEO, social media, content marketing, paid ads.</p>
+                <p class="price-tag">Starting ₹15,000/month</p>
+            </div>
+            <div class="service-card">
+                <h3>Lead Generation</h3>
+                <p>Meta Ads, LinkedIn outreach, funnels, landing pages.</p>
+                <p class="price-tag">Starting ₹20,000/month</p>
+            </div>
+            <div class="service-card">
+                <h3>Business Consulting</h3>
+                <p>Digital strategy, online presence audit, growth roadmap.</p>
+                <p class="price-tag">Starting ₹10,000</p>
+            </div>
+            <div class="service-card">
+                <h3>Personal Branding</h3>
+                <p>LinkedIn optimization, content strategy, profile growth.</p>
+                <p class="price-tag">Starting ₹15,000</p>
+            </div>
+            <div class="service-card">
+                <h3>Maintenance & Support</h3>
+                <p>Website updates, SEO monitoring, marketing support.</p>
+                <p class="price-tag">Starting ₹5,000/month</p>
+            </div>
         </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects-section" id="projects">
+        <h2 class="section-title">My Work</h2>
+        <p class="section-sub">Real projects, real results</p>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-tag">B2B</div>
+                <h3>Hotel Business Website</h3>
+                <p>Corporate website with lead generation forms, service pages, and SEO optimization.</p>
+                <a href="https://ipawanjangir.github.io/Hotel-Anand-International/" class="project-link">View Project
+                    →</a>
+            </div>
+            <div class="project-card">
+                <div class="project-tag">Real Estate</div>
+                <h3>Real Estate Website</h3>
+                <p>Property listing, search filters, inquiry forms, and agent contact system.</p>
+                <a href="https://ipawanjangir.github.io/EstatePrime/" class="project-link">View Project →</a>
+            </div>
+            <div class="project-card">
+                <div class="project-tag">Hotel</div>
+                <h3>Laxmi Residency — Hotel Website</h3>
+                <p>Direct booking system, room availability calendar, payment gateway, and OTA comparison.</p>
+                <a href="https://ipawanjangir.github.io/Laxmi-residency/" class="project-link">View Project →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services-section" id="services">
+        <h2 class="section-title">Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Website Design</h3>
+                <p>Custom design that matches your brand and converts visitors.</p>
+                <p class="price-tag">Starting ₹8,000</p>
+            </div>
+            <div class="service-card">
+                <h3>Website Development</h3>
+                <p>Clean code, responsive design, fast loading, SEO-ready.</p>
+                <p class="price-tag">Starting ₹15,000</p>
+            </div>
+            <div class="service-card">
+                <h3>Booking Systems</h3>
+                <p>Direct booking engine, calendar, payment integration.</p>
+                <p class="price-tag">Starting ₹25,000</p>
+            </div>
+            <div class="service-card">
+                <h3>Maintenance & Support</h3>
+                <p>Regular updates, bug fixes, performance monitoring.</p>
+                <p class="price-tag">Starting ₹2,000/month</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <h2 class="section-title">What Clients Say</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Pawan built our hotel website with direct booking system. Our OTA
+                    commission reduced significantly."</p>
+                <p class="testimonial-author">— Hotel Owner, Bikaner</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Professional work, delivered on time. The website is fast and looks great
+                    on mobile."</p>
+                <p class="testimonial-author">— Business Owner, Jodhpur</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <!-- <section class="contact-section" id="contact">
+  <h2 class="section-title">Let's Build Your Website</h2>
+  <p class="section-sub">Ready to grow your business online?</p>
+  
+  <div class="contact-grid">
+    <div class="contact-card">
+      <div class="contact-icon">📧</div>
+      <h3>Email</h3>
+      <p>jangiritsolution01@gmail.com</p>
     </div>
-
-    <div class="automation-highlight">
-        <h2 style="color: var(--primary); margin-bottom: 10px;">🔥 Featured Project: Scraping Engine</h2>
-        <p>Built a high-performance **Java Scraping Engine** for real-time market data. Optimized for the Fintech industry to automate lead generation and data workflows.</p>
+    <div class="contact-card">
+      <div class="contact-icon">📱</div>
+      <h3>Phone</h3>
+      <p> +91-8905079206</p>
     </div>
-
-    <h2 style="margin: 40px 0 20px; border-left: 5px solid var(--primary); padding-left: 15px;">Experience</h2>
-    <div class="card" style="margin-bottom: 20px;">
-        <h4>Senior Tech Lead | Jangir IT Solution</h4>
-        <p style="color: var(--primary); font-weight: bold;">2024 - Present</p>
-        <p>Developing automation scripts and debugging SaaS products using VS Code.</p>
+    <div class="contact-card">
+      <div class="contact-icon">💼</div>
+      <h3>LinkedIn</h3>
+      <p>linkedin.com/in/pawanjangir</p>
     </div>
-    <div class="card">
-        <h4>General Manager | Niranjan Gas Agency</h4>
-        <p style="color: #64748b; font-weight: bold;">2020 - 2024</p>
-        <p>Managed 4 years of customer operations with a focus on resolving technical billing issues.</p>
-    </div>
-</div>
+  </div>
+  
+  <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" class="btn-gold">Send Me a Message</a>
+</section> -->
 
-<div id="chat-widget">
-    <div id="chat-popup" class="chat-popup">
-        <h4 style="color: var(--accent); margin-bottom: 5px;">Pawan's Assistant 🤖</h4>
-        <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 15px;">Hi! Aapko kis service ke baare mein jaanna hai?</p>
-        <button class="chat-option" onclick="sendToWA('Hiring for Tech Role')">Hire for Java/Tech Role</button>
-        <button class="chat-option" onclick="sendToWA('Support Opportunity')">Hire for Support Role</button>
-        <button class="chat-option" onclick="sendToWA('Automation Project')">Business Automation Query</button>
-    </div>
-    <button class="chat-btn" onclick="toggleChat()">💬</button>
-</div>
+    <!-- Contact Form -->
+    <section class="contact-section" id="contact">
+        <h2 class="section-title">Let's Grow Your Business</h2>
+        <p class="section-sub">Website, marketing, or consulting — I can help.</p>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <div class="contact-icon">📧</div>
+                <h3>Email</h3>
+                <p>jangiritsolution01@gmail.com</p>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon">📱</div>
+                <h3>Phone</h3>
+                <p>+91 8905079206</p>
+            </div>
+            <div class="contact-card">
+                <div class="contact-icon">💼</div>
+                <h3>LinkedIn</h3>
+                <p>linkedin.com/in/pawanjangir</p>
+            </div>
+        </div>
 
-<footer>
-    <h2>Let's connect and collaborate!</h2>
-    <p style="margin: 15px 0;">Email: <strong>jangiritsolution01@gmail.com</strong></p>
-    <div style="display: flex; justify-content: center; gap: 15px;">
-        <a href="https://www.linkedin.com/in/pawan-jangir-133a453a7/" target="_blank" class="btn btn-linkedin">LinkedIn</a>
-        <a href="mailto:jangiritsolution01@gmail.com?subject=Job%20Opportunity&body=Hi%20Pawan," class="btn" style="background: var(--dark);">Email Me</a>    </div>
-</footer>
+        <!-- CONTACT FORM -->
+        <form class="contact-form" action="https://formspree.io/f/mdekdywj" method="POST">
+            <h3>Send Me a Message</h3>
 
-<script>
-    function toggleChat() {
-        document.getElementById('chat-popup').classList.toggle('active');
-    }
-    function sendToWA(topic) {
-        let myNumber = "918905079206"; 
-        let message = encodeURIComponent("Hi Pawan, Maine aapka portfolio dekha. Mujhe " + topic + " ke baare mein baat karni hai.");
-        window.open("https://wa.me/" + myNumber + "?text=" + message, '_blank');
-    }
-</script>
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label>Your Email</label>
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                </div>
+            </div>
 
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Your Phone Number</label>
+                    <input type="tel" name="phone" placeholder="Enter your phone number" required>
+                </div>
+                <div class="form-group">
+                    <label>Subject</label>
+                    <input type="text" name="subject" placeholder="What is this about?" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Message</label>
+                <textarea name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-gold">Send Message</button>
+        </form>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Pawan Jangir · Jangir IT Solution · Digital Growth Specialist · MSME Registered</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
